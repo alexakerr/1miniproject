@@ -12,10 +12,10 @@ async function postData(url="", data = {}) {
 }
 
 const userData = {
-    name: 'Ye-Ol McBoatface',
-    player: 'Ryan Rhoades',
-    class: 'Rogue',
-    race: 'Orc'
+    name: 'alexaa',
+    player: 'Alexa Kerr',
+    class: 'Princess',
+    race: 'Royal'
 }
 
 const url = 'https://httpbin.org/post'
@@ -54,6 +54,9 @@ async function displayShow(show) {
     console.log(show.name)
     div.insertAdjacentHTML('beforeend', html)
 }
+
+
+
 
 
 
