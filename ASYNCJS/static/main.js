@@ -25,7 +25,7 @@ const url = 'https://httpbin.org/post'
 
 async function getTVData(query){
     
-    const response = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${query}`)
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${query}`)
     // console.log(response)
     return await response.json()
 }
@@ -41,19 +41,17 @@ async function fetchData(event){
 }
 
 async function displayShow(show) {
+    const hi = show.sprites.front_default
     const html = `<div class="card">
-                    <img src="${show.image.original}" alt="${show.name}">
+                 
                         <div>
                             <h1>${show.name}</h1>
-                            <p>Summary: </p>
-                            ${show.summary}
-                            <p>Rating: ${show.rating.average}</p>
-                            <p>Genres: ${show.genres.join(", ")}</p>
+                            <img src= "${hi}">
                         <div>
                 </div>`
                 
     const div = document.getElementsByClassName('search-show')[0]
-    
+    console.log(show.name)
     div.insertAdjacentHTML('beforeend', html)
 }
 
